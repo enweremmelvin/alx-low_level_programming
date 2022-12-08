@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 /**
- * This program prints and returns 0
- * try it
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	char output[] = "\"Programming is like building a multilingual puzzle";
+
 	puts(output);
 	return (0);
 }
