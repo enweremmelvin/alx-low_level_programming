@@ -14,6 +14,11 @@ int main(void)
 	int lls = sizeof(long long);
 	int fs = sizeof(float);
 
-	printf("%d\n%d\n%d\n%d\n%d\n", cs, is, ls, lls, fs);
+	printf("Size of a char: %d byte(s)\n", cs);
+	printf("Size of an int: %d byte(s)\n", is);
+	printf("Size of a long int: %d byte(s)\n", ls);
+	printf("Size of a long long int: %d byte(s)\n", lls);
+	printf("Size of a float: %d byte(s)\n", fs);
+
 	return (0);
 }
