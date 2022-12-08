@@ -8,12 +8,12 @@
 int main(void)
 {
 	/*declare variables to hold data types*/
-	int char_size = sizeof(char);
-	int int_size = sizeof(int);
-	int long_size = sizeof(long);
-	int long_long_size = sizeof(long long);
-	int float_size = sizeof(float);
+	int cs = sizeof(char);
+	int is = sizeof(int);
+	int ls = sizeof(long);
+	int lls = sizeof(long long);
+	int fs = sizeof(float);
 
-	printf("%d\n%d\n%d\n%d\n%d\n", char_size, int_size, long_size, long_long_size, float_size);
+	printf("%d\n%d\n%d\n%d\n%d\n", cs, is, ls, lls, fs);
 	return (0);
 }
