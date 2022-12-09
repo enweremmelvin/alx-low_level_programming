@@ -14,7 +14,7 @@ int main(void)
 	{
 		for (lnum = '0'; lnum <= '9'; lnum++)
 		{
-			if (!((fnum == lnum) || (lnum > fnum)))
+			if (!((fnum == lnum) && (fnum > lnum)))
 			{
 				putchar(fnum);
 				putchar(lnum);
