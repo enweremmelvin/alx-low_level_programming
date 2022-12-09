@@ -10,8 +10,8 @@ int main(void)
 	int fnum;
 	int lnum;
 
-	fnum = 0;
-	lnum = 1;
+	fnum = '0';
+	lnum = '1';
 
 	while (fnum <= '8')
 	{
@@ -23,7 +23,7 @@ int main(void)
 				putchar(lnum);
 			}
 
-			if ((fnum != 8) && (lnum != 9))
+			if ((fnum != '8') && (lnum != '9'))
 			{
 				putchar(',');
 				putchar(' ');
