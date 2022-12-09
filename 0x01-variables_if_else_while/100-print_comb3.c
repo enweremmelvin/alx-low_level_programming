@@ -11,9 +11,9 @@ int main(void)
 	int lnum;
 
 	fnum = '0';
-	lnum = '1';
+	lnum = '0';
 
-	while (fnum <= '8')
+	while (fnum <= '9')
 	{
 		while (lnum <= '9')
 		{
