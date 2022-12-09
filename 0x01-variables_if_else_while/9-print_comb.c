@@ -12,8 +12,12 @@ int main(void)
 	for (comb = '0'; comb <= '9'; comb++)
 	{
 		putchar(comb);
-		putchar(',');
-		putchar(' ');
+
+		if (comb < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 
 	putchar('\n');
