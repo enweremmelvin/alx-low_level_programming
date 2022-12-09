@@ -13,9 +13,9 @@ int main(void)
 	fnum = '0';
 	lnum = '0';
 
-	while (fnum <= '9')
+	for (fnum = '0'; fnum <= '9'; fnum++)
 	{
-		while (lnum <= '9')
+		for (lnum = '0'; lnum <= '9'; lnum++)
 		{
 			if (!((fnum == lnum) || (lnum < fnum)))
 			{
@@ -28,11 +28,7 @@ int main(void)
 					putchar(' ');
 				}
 			}
-
-			lnum++;
 		}
-
-		fnum++;
 	}
 
 	putchar('\n');
