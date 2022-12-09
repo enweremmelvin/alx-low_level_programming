@@ -17,7 +17,7 @@ int main(void)
 	{
 		while (lnum <= '9')
 		{
-			if ((fnum < lnum) || (lnum != fnum))
+			if (!((fnum == lnum) || (lnum > fnum)))
 			{
 				putchar(fnum);
 				putchar(lnum);
