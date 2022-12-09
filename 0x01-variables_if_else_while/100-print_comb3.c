@@ -28,10 +28,11 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
+
+			lnum++;
 		}
 
 		fnum++;
-		lnum++;
 	}
 
 	putchar('\n');
