@@ -8,8 +8,11 @@
 int main(void)
 {
 	int ddgt;
+	int high_ceil;
 
-	for (ddgt = '0'; ddgt <= '89'; ddgt++)
+	high_ceil = '89';
+
+	for (ddgt = '0'; ddgt <= high_ceil; ddgt++)
 	{
 		if (ddgt > 0 && ddgt <= 9)
 			putchar('0');
