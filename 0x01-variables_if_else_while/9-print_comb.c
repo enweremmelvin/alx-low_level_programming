@@ -13,10 +13,13 @@ int main(void)
 	{
 		putchar(comb);
 
-		while (comb < 9)
+		if (comb != 9)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(",\ ");
+		}
+		else
+		{
+			putchar('$');
 		}
 	}
 
