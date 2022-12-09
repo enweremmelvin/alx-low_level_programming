@@ -19,7 +19,7 @@ int main(void)
 				putchar(fnum);
 				putchar(lnum);
 
-				if ((fnum != '8') && (lnum != '9'))
+				if ((fnum != '9') && (lnum != '8'))
 				{
 					putchar(',');
 					putchar(' ');
