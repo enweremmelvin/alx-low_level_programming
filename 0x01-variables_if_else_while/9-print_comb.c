@@ -15,11 +15,8 @@ int main(void)
 
 		if (comb != 9)
 		{
-			putchar(", ");
-		}
-		else
-		{
-			putchar('$');
+			putchar(",");
+			putchar(" ");
 		}
 	}
 
