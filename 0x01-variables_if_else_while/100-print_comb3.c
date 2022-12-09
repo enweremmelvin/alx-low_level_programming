@@ -7,22 +7,24 @@
  */
 int main(void)
 {
-	int ddgt;
-	int high_ceil;
+	int fnum;
+	int lnum;
 
-	high_ceil = '89';
-
-	for (ddgt = '0'; ddgt <= high_ceil; ddgt++)
+	for (fnum = '0'; fnum <= '9'; fnum++)
 	{
-		if (ddgt > 0 && ddgt <= 9)
-			putchar('0');
-
-		putchar(ddgt);
-
-		if (ddgt != '89')
+		for (lnum = '0'; lnum <= '9'; lnum++)
 		{
-			putchar(',');
-			putchar(' ');
+			if (!((fnum == lnum) || (fnum > lnum)))
+			{
+				putchar(fnum);
+				putchar(lnum);
+
+				if ((fnum != '8') && (lnum != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 
