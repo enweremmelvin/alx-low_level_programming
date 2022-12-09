@@ -9,8 +9,11 @@ int main(void)
 {
 	int ddgt;
 
-	for (ddgt = '00'; ddgt <= '89')
+	for (ddgt = '0'; ddgt <= '89')
 	{
+		if (ddgt > 0 && ddgt <= 9)
+			putchar('0');
+
 		putchar(ddgt);
 
 		if (ddgt != '89')
