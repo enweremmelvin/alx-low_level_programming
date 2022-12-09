@@ -12,7 +12,7 @@ int main(void)
 
 	for (fnum = '0'; fnum <= '9'; fnum++)
 	{
-		for (lnum = '1'; lnum <= '9'; lnum++)
+		for (lnum = '0'; lnum <= '9'; lnum++)
 		{
 			if (!((fnum == lnum) || (fnum > lnum)))
 			{
