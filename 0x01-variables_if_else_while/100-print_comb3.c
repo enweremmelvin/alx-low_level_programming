@@ -21,18 +21,18 @@ int main(void)
 			{
 				putchar(fnum);
 				putchar(lnum);
+
+				if ((fnum != '8') && (lnum != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 
-			if ((fnum != '8') && (lnum != '9'))
-			{
-				putchar(',');
-				putchar(' ');
-			}
-
-			fnum++;
+			lnum++;
 		}
 
-		lnum++;
+		fnum++;
 	}
 
 	putchar('\n');
