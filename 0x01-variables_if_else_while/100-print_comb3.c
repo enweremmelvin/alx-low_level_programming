@@ -9,7 +9,7 @@ int main(void)
 {
 	int ddgt;
 
-	for (ddgt = '0'; ddgt <= '89')
+	for (ddgt = '0'; ddgt <= '89'; ddgt++)
 	{
 		if (ddgt > 0 && ddgt <= 9)
 			putchar('0');
