@@ -11,7 +11,7 @@ int main(void)
 	int second;
 	int third;
 
-	for (first = '0'; fist <= '9'; first++)
+	for (first = '0'; first <= '9'; first++)
 	{
 		for (second = '0'; second <= '9'; second++)
 		{
@@ -32,4 +32,7 @@ int main(void)
 			}
 		}
 	}
+
+	putchar('\n');
+	return (0);
 }
