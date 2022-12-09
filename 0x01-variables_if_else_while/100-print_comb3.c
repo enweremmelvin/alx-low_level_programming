@@ -29,10 +29,10 @@ int main(void)
 				putchar(' ');
 			}
 
-			lnum++;
+			fnum++;
 		}
 
-		fnum++;
+		lnum++;
 	}
 
 	putchar('\n');
