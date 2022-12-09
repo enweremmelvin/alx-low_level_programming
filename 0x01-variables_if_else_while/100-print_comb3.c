@@ -10,22 +10,28 @@ int main(void)
 	int fnum;
 	int lnum;
 
-	for (fnum = '0'; fnum <= '9'; fnum++)
+	fnum = 0;
+	lnum = 1;
+
+	while (fnum <= '8')
 	{
-		for (lnum = '0'; lnum <= '9'; lnum++)
+		while (lnum <= '9')
 		{
-			if (!((fnum == lnum) || (lnum > fnum)))
+			if ((fnum < lnum) && (fnum != lnum))
 			{
 				putchar(fnum);
 				putchar(lnum);
+			}
 
-				if ((fnum != '9') && (lnum != '8'))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			if ((fnum != 8) && (lnum != 9))
+			{
+				putchar(',');
+				putchar(' ');
 			}
 		}
+
+		fnum++;
+		lnum++;
 	}
 
 	putchar('\n');
