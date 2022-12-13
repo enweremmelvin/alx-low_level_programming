@@ -8,9 +8,9 @@
 int main(void)
 {
 	char string[8] = "_putchar";
-	int counter = 1;
+	int counter = 0;
 
-	while (counter <= 8)
+	while (counter <= 7)
 	{
 		_putchar(string[counter]);
 		counter++;
