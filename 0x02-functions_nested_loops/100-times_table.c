@@ -21,7 +21,7 @@ void print_times_table(int n)
 				}
 				else
 				{
-					printf("%3d", rows *cols);
+					printf("%3d", rows * cols);
 				}
 
 				if (cols == n)
