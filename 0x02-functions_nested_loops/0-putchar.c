@@ -16,6 +16,5 @@ int main(void)
 		counter++;
 	}
 
-	_putchar('\n');
 	return (0);
 }
