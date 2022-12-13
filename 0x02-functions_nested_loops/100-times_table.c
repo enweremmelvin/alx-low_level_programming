@@ -9,6 +9,7 @@ void print_times_table(int n)
 {
 	int rows;
 	int cols;
+
 	if (!(n > 15 || n < 0))
 	{
 		for (rows = 0; rows <= n; rows++)
@@ -26,8 +27,8 @@ void print_times_table(int n)
 
 				if (cols == n)
 					continue;
-			
-				printf(",   ");
+
+				printf(", ");
 			}
 
 			printf("\n");
