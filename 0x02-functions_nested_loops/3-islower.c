@@ -2,7 +2,7 @@
 
 /**
  * _islower - find lowercase characters
- * _islower(int c): int value to be checked
+ * @c: int value to be checked
  *
  * Return: 1 if true; 0 if false
  */
