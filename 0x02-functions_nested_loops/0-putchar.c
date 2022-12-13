@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char string[11] = "_putchar\n";
+	char string[11] = "_putchar";
 	int counter = 0;
 
 	while (counter <= 11)
@@ -16,5 +16,6 @@ int main(void)
 		counter++;
 	}
 
+	_putchar('\n');
 	return (0);
 }
