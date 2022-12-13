@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	char string[9] = "_putchar";
+	char string[8] = "_putchar";
 	int counter = 0;
 
-	while (counter <= 9)
+	while (counter <= 8)
 	{
 		_putchar(string[counter]);
 		counter++;
