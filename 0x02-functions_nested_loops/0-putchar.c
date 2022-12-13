@@ -1,4 +1,3 @@
-#include <stdout.h>
 #include "main.h"
 #include "_putchar.h"
 
