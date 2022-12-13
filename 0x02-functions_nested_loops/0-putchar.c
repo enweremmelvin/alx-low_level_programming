@@ -8,8 +8,16 @@
  */
 int main(void)
 {
-	_putchar('_putchar');
-	_putchar(' ');
+	char string[9] = "_putchar";
+	int counter = 0;
 
+	while (counter <= 8)
+	{
+		_putchar(string[counter]);
+		counter++;
+	}
+
+
+	_putchar('\n');
 	return (0);
 }
