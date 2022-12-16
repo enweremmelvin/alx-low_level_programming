@@ -12,7 +12,7 @@ int main(void)
 
 	for (counter = 2; num > 1; counter++)
 	{
-		while(num % counter == 0)
+		while (num % counter == 0)
 		{
 			num = num / counter;
 		}
