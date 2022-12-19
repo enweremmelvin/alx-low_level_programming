@@ -10,6 +10,7 @@ void puts2(char *str)
 	int stringLength;
 	int counter;
 	char index;
+	char output[1000];
 
 	stringLength = strlen(str);
 
@@ -17,11 +18,11 @@ void puts2(char *str)
 	{
 		for (counter = 0; counter <= stringLength / 2; counter++)
 		{
-			printf("%c", *(str + index));
+			output[counter] = *(str + index);
 			index += 2;
 		}
 
-		printf("\n");
+		puts(output);
 	}
 	else
 	{
