@@ -26,6 +26,6 @@ void rev_string(char *s)
 	}
 	else
 	{
-		puts("\0");
+		s[0] = '\0';
 	}
 }
