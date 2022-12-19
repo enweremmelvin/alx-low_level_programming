@@ -27,6 +27,6 @@ void print_rev(char *s)
 	}
 	else
 	{
-		puts(reversed);
+		puts('');
 	}
 }
