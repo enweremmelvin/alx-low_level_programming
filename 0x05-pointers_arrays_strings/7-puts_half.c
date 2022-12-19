@@ -7,21 +7,21 @@
  */
 void puts_half(char *str)
 {
+	int length;
 	int min_len;
-	int max_len;
 	int counter;
 	char newArray[1000];
 
-	if (strlen(str) % 2 == 0)
-		min_len = strlen(str) / 2;
+	length = strlen(str);
+
+	if (length % 2 == 0)
+		min_len = length / 2;
 	else
-		min_len = (strlen(str) - 1) / 2;
+		min_len = (length - 1) / 2;
 
-	max_len = strlen(str);
-
-	if (min_len > 0)
+	if (length > 0)
 	{
-		for (counter = 0; counter <= max_len / 2; counter++)
+		for (counter = 0; counter <= length / 2; counter++)
 		{
 			newArray[counter] = str[min_len];
 			min_len++;
