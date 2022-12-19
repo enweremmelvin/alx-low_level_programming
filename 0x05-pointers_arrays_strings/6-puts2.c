@@ -9,7 +9,7 @@ void puts2(char *str)
 {
 	int stringLength;
 	int counter;
-	char index;
+	int index;
 	char output[1000];
 
 	stringLength = strlen(str);
