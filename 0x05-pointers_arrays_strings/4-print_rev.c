@@ -25,4 +25,8 @@ void print_rev(char *s)
 
 		puts(reversed);
 	}
+	else
+	{
+		puts(reversed);
+	}
 }
