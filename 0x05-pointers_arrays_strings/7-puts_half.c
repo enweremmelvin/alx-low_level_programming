@@ -19,10 +19,14 @@ void puts_half(char *str)
 	{
 		for (counter = 0; counter <= max_len / 2; counter++)
 		{
-			newArray[counter] = str[min_len];
+			newArray[counter] = str[min_len - 1];
 			min_len++;
 		}
 
 		puts(newArray);
+	}
+	else
+	{
+		puts('\0');
 	}
 }
