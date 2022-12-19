@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+
+/**
+ * puts_half - print the second half of a string
+ * @str: string to be considered
+ */
+void puts_half(char *str)
+{
+	
+}
