@@ -12,7 +12,11 @@ void puts_half(char *str)
 	int counter;
 	char newArray[1000];
 
-	min_len = strlen(str) / 2;
+	if (strlen(str) % 2 == 0)
+		min_len = strlen(str) / 2;
+	else
+		min_len = (strlen(str) - 1) / 2;
+
 	max_len = strlen(str);
 
 	if (min_len > 0)
