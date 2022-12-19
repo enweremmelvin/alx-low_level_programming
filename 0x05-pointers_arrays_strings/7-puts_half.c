@@ -19,9 +19,19 @@ void puts_half(char *str)
 	else
 		min_len = (length - 1) / 2;
 
-	if (length > 0)
+	if (length > 0 && length % 2 == 0)
 	{
 		for (counter = 0; counter <= length / 2; counter++)
+		{
+			newArray[counter] = str[min_len];
+			min_len++;
+		}
+
+		puts(newArray);
+	}
+	else if (length > 0 && length % 2 != 0)
+	{
+		for (counter = 0; counter <= (length - 1) / 2; counter++)
 		{
 			newArray[counter] = str[min_len];
 			min_len++;
