@@ -27,6 +27,6 @@ void print_rev(char *s)
 	}
 	else
 	{
-		puts(NULL);
+		puts('\0');
 	}
 }
