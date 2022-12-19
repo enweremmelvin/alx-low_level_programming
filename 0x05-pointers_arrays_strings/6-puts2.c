@@ -16,6 +16,9 @@ void puts2(char *str)
 
 	if (stringLength > 0)
 	{
+		if (!(stringLength % 2 == 0))
+			stringLength++;
+
 		for (counter = 0; counter <= stringLength / 2; counter++)
 		{
 			output[counter] = *(str + index);
