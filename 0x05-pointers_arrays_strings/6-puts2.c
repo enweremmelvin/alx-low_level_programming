@@ -13,6 +13,7 @@ void puts2(char *str)
 	char output[1000];
 
 	stringLength = strlen(str);
+	index = 0;
 
 	if (stringLength > 0)
 	{
