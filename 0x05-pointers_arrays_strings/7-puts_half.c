@@ -16,7 +16,7 @@ void puts_half(char *str)
 
 	if (length % 2 == 0)
 		min_len = length / 2;
-	else if (length % 2 != 0)
+	else if (!(length % 2 == 0))
 		min_len = (length - 1) / 2;
 
 	if (length > 0)
