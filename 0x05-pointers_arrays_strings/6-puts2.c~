@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+
+/**
+ * puts2 - print half the value of an array
+ * @str: array to be considered
+ */
+void puts2(char *str)
+{
+	
+}
