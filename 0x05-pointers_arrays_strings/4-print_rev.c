@@ -10,16 +10,19 @@ void print_rev(char *s)
 	int length;
 	int counter;
 	int index;
-	char reversed[1000];
+	char reversed[500];
 
 	length = strlen(s);
 	index = 0;
 
-	for (counter = length - 1; counter >= 0; counter--)
+	if (length > 0)
 	{
-		reversed[index] = s[counter];
-		index++;
-	}
+		for (counter = length - 1; counter >= 0; counter--)
+		{
+			reversed[index] = s[counter];
+			index++;
+		}
 
-	puts(reversed);
+		puts(reversed);
+	}
 }
