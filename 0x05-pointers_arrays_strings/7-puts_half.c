@@ -19,7 +19,7 @@ void puts_half(char *str)
 	{
 		for (counter = 0; counter <= max_len / 2; counter++)
 		{
-			newArray[counter] = str[min_len + 1];
+			newArray[counter] = str[min_len];
 			min_len++;
 		}
 
