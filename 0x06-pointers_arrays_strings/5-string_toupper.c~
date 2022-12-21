@@ -1,0 +1,11 @@
+/**
+ * *string_toupper - convert lowercase strings to uppercase
+ * @alpha: pointer to string to be converted
+ *
+ * Return: return pointer to converted string
+ */
+
+char *string_toupper(char *alpha)
+{
+	
+}
