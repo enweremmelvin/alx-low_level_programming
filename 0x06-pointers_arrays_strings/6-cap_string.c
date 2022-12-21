@@ -23,14 +23,14 @@ char *cap_string(char *string)
 	int counter;
 	int next;
 
-	length = strlen(string);
+	length = strlen(string) - 1;
 
-	for (counter = 0; counter < length; counter++)
+	for (counter = 0; counter <= length; counter++)
 	{
 		curr = string[counter];
 		next = string[counter + 1];
 
-		for (i = 0; i < strlen(ptr); i++)
+		for (i = 0; i <= strlen(ptr) - 1; i++)
 		{
 			if ((curr == (ptr[i])) && next >= 97 && next <= 122)
 				string[counter + 1] -= 32;
