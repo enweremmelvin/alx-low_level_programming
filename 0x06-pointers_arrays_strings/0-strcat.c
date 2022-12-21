@@ -2,8 +2,8 @@
 
 /**
  * *_strcat - concatenate characters
- * @*dest: destination character
- * @*src: source character
+ * @dest: destination character
+ * @src: source character
  *
  * Return: concatenated string
  */
