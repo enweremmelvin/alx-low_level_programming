@@ -10,7 +10,7 @@
 
 char *cap_string(char *string)
 {
-	char test[] = {
+	char test[14] = {
 		' ', '\t', '\n', ',', ';', '.',
 		'!', '?', '"', '(', ')', '{', '}'
 	};
