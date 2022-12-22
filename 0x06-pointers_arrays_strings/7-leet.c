@@ -12,7 +12,7 @@ char *leet(char *string)
 {
 	int counter;
 	int length;
-	long unsigned int index;
+	unsigned long int index;
 
 	int find[] = {
 		97, 65, 101, 69, 111, 79,
