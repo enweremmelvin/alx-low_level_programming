@@ -29,9 +29,9 @@ char *rot13(char *string)
 
 	length  = strlen(string);
 
-	for (counter = 0; counter < length; counter++)
+	for (counter = 0; counter <= length; counter++)
 	{
-		for (index = 0; index < 55; index++)
+		for (index = 0; index < 54; index++)
 		{
 			if (string[counter] == find[index])
 			{
