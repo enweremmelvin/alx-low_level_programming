@@ -30,6 +30,9 @@ char *cap_string(char *string)
 		curr = string[counter];
 		next = string[counter + 1];
 
+		if (counter == 0 && curr >= 97 && curr <= 122)
+			string[counter] -= 32;
+
 		for (i = 0; i <= strlen(ptr); i++)
 		{
 			if ((curr == (ptr[i])) && next >= 97 && next <= 122)
