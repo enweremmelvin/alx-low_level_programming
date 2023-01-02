@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 
 /**
  * *_strstr - find the needle in the haystack
@@ -11,33 +12,24 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j;
-	int match;
+	unsigned int i, j, match;
 	char *ptr;
 
-	i = 0;
-
-	while (i < strlen(needle))
+	for (i = 0; i < strlen(needle); i++)
 	{
-		j = 0;
-
-		while (j < strlen(haystack))
+		for (j = 0; j < strlen(haystack); j++)
 		{
 			if (needle[i] == haystack[j])
 			{
-				match++;
+				match = 1;
 				ptr = &haystack[j];
 
 				break;
 			}
-
-			j++;
 		}
 
 		if (match == 1)
 			break;
-
-		i++;
 	}
 
 	if (match == 1)
