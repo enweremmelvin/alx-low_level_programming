@@ -5,7 +5,7 @@
  * @b: new value to be used
  * @n: number of indexes to modify
  *
- * Return: 0 at the end
+ * Return: pointer to memory area (array) s
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -15,10 +15,10 @@ char *_memset(char *s, char b, unsigned int n)
 	while (i < n)
 	{
 		if (s[i] != b)
-			s[0 + i] = b;
+			s[i] = b;
 
 		i++;
 	}
 
-	return (0);
+	return (s);
 }
