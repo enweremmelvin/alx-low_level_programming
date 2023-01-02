@@ -14,11 +14,12 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
 	int match;
+	int count;
 	int s_len = strlen(s);
 	int accept_len = strlen(accept);
 
 	i = 0;
-	match = 0;
+	count = 0;
 
 	while (i <= accept_len)
 	{
@@ -28,15 +29,20 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (accept[i] == s[j])
 			{
-				match++;
+				match = 1;
 				break;
 			}
 
 			j++;
 		}
 
+		if (match == 1)
+			count += 1;
+
+		match = 0;
+
 		i++;
 	}
 
-	return (match);
+	return (count);
 }
