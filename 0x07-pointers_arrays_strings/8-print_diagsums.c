@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 		value1 += a[i];
 	}
 
-	for (row = 0; row <= size; row++)
+	for (row = 1; row <= size; row++)
 	{
 		i = (row * size) - row;
 		value2 += a[i];
