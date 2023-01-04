@@ -1,9 +1,7 @@
 /**
  * _strlen_recursion - find the lengt of a string
- * *length - return pointer to length value
  *
  * @s: string to be searched
- * @num: argument
  *
  * Return: string length
  */
