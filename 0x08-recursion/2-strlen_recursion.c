@@ -1,5 +1,3 @@
-#include <string.h>
-
 /**
  * _strlen_recursion - find the lengt of a string
  * *length - return pointer to length value
