@@ -2,15 +2,18 @@
 
 /**
  * _strlen_recursion - find the lengt of a string
+ * *length - return pointer to length value
  *
  * @s: string to be searched
+ * @num: argument
  *
  * Return: string length
  */
 
 int _strlen_recursion(char *s)
 {
-	int i = strlen(s);
+	if (*s != '\0')
+		return (1 + _strlen_recursion(s + 1));
 
-	return(i);
+	return (0);
 }
