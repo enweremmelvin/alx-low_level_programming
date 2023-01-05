@@ -2,6 +2,7 @@
  * _sqrt_recursion - find the square root of given number
  *
  * @n: given number
+ * @square: square of number n
  *
  * Return: square root or -1 if none
  */
@@ -27,6 +28,15 @@ int _sqrt_recursion(int n)
 
 	return (0);
 }
+
+/**
+ * root - compute the root of num from main
+ *
+ * @n: number to get its root
+ * @square: root of number num
+ *
+ * Return: result of computation
+ */
 
 int root(int n, int square)
 {
