@@ -7,7 +7,7 @@
  * Return: return 1 if n is prime, 0 otherwise
  */
 
-int prime_check(int num, int divide);
+int prime_check(int n, int divide);
 
 int is_prime_number(int n)
 {
@@ -17,7 +17,16 @@ int is_prime_number(int n)
 	return (prime_check(n, 2));
 }
 
-int prime_check(int num, int divide)
+/**
+ * prime_check - check for prime number
+ *
+ * @n: number to be checked
+ * @divide: divide num be <-
+ *
+ * Return: 1 if prime, 0 otherwise
+ */
+
+int prime_check(int n, int divide)
 {
 	if (divide < num)
 	{
@@ -28,5 +37,5 @@ int prime_check(int num, int divide)
 			return (1);
 	}
 
-	return (prime_check(num, divide + 1));
+	return (prime_check(n, divide + 1));
 }
