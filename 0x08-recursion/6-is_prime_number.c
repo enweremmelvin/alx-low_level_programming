@@ -28,12 +28,12 @@ int is_prime_number(int n)
 
 int prime_check(int n, int divide)
 {
-	if (divide < num)
+	if (divide < n)
 	{
-		if (num % divide == 0)
+		if (n % divide == 0)
 			return (0);
 
-		if (divide == num / 2)
+		if (divide == n / 2)
 			return (1);
 	}
 
