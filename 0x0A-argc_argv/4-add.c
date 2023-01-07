@@ -12,12 +12,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int result;
-	int chknum;
+	int i, result, chknum;
 
-	result = 0;
-	chknum = 0;
+	result = chknum = 0;
 
 	/* check if only one argument (function name) is passed*/
 	if (argc == 1)
@@ -32,7 +29,6 @@ int main(int argc, char *argv[])
 		if (atoi(argv[i]) == 0)
 			chknum++;
 	}
-
 	if (chknum == argc)
 	{
 		printf("0\n");
@@ -47,7 +43,6 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-
 		if (atoi(argv[i]) > 0)
 		{
 			result += atoi(argv[i]);
@@ -56,6 +51,5 @@ int main(int argc, char *argv[])
 
 	if (result > 0)
 		printf("%d\n", result);
-
 	return (0);
 }
