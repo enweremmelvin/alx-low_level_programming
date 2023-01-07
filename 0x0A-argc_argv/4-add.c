@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
 
 	/* check if args are passed but don't contain a digit */
@@ -47,7 +48,7 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 
-		else
+		if (atoi(argv[i]) > 0)
 		{
 			result += atoi(argv[i]);
 		}
