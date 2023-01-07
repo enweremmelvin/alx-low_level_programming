@@ -22,9 +22,8 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
 	/* check if args are passed but don't contain a digit */
-	for (i = 0; i < argc; i++)
+	/* for (i = 0; i < argc; i++)
 	{
 		if (atoi(argv[i]) == 0)
 			chknum++;
@@ -33,7 +32,7 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 		return (0);
-	}
+		}*/
 
 	/* iterate over argc and print result or return error if char exists*/
 	for (i = 1; i < argc; i++)
@@ -48,8 +47,8 @@ int main(int argc, char *argv[])
 			result += atoi(argv[i]);
 		}
 	}
-
 	if (result > 0)
 		printf("%d\n", result);
+
 	return (0);
 }
