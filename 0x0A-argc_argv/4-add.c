@@ -12,9 +12,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i, result, chknum, zero;
+	int i, j, result, zero;
 
-	result = chknum = 0;
+	result = 0;
 
 	/* check if only one argument (function name) is passed*/
 	if (argc == 1)
@@ -26,17 +26,19 @@ int main(int argc, char *argv[])
 	/* iterate over argc and print result or return error if char is found*/
 	for (i = 1; i < argc; i++)
 	{
-		if (!(*argv[i] >= '0' && *argv[i] <= '9'))
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			if (atoi(argv[i]) > 0)
+				result += atoi(argv[i]);
+
+			if (*argv[i] == '0')
+				zero = 1;
 		}
-		if (atoi(argv[i]) > 0)
-		{
-			result += atoi(argv[i]);
-		}
-		if (*argv[i] == '0')
-			zero = 1;
 	}
 	if (result > 0)
 		printf("%d\n", result);
