@@ -13,12 +13,13 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int num;
 	int coins[6] = {25, 10, 5, 2, 1};
 	int change = 0;
 
 	if (argc == 2)
 	{
-		int num = atoi(argv[1]);
+		num = atoi(argv[1]);
 
 		if (num < 0)
 		{
