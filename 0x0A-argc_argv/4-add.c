@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
-			if (atoi(argv[i]) > 0)
-				result += atoi(argv[i]);
 
 			if (*argv[i] == '0')
 				zero = 1;
 		}
+
+		result += atoi(argv[i]);
 	}
 	if (result > 0)
 		printf("%d\n", result);
