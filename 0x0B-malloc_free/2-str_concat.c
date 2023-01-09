@@ -58,7 +58,7 @@ char *str_concat(char *s1, char *s2)
 	conditional(s1, s2, &s1len, &s2len, &check);
 
 	/* allocate memory to newstr */
-	newstr = malloc((s1len + s2len) * sizeof(char));
+	newstr = malloc((s1len + s2len + 1) * sizeof(char));
 
 	if (newstr == NULL)
 		return (NULL);
