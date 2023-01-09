@@ -12,12 +12,15 @@
 char *_strdup(char *str)
 {
 	unsigned int i;
-	unsigned int length = strlen(str);
+	unsigned int length;
 	char *clone;
+
+	if (str != NULL)
+		length = strlen(str);
 
 	clone = malloc(length * sizeof(char) + 1);
 
-	if (!str)
+	if (str == NULL || clone == NULL)
 		return (NULL);
 
 	for (i = 0; i <= length; i++)
