@@ -36,9 +36,12 @@ char *argstostr(int ac, char **av)
 
 		for (j = 0; j < length; j++)
 		{
-			concat[k] = av[i][j];
+			if (av[i][j] != '\0')
+			{
+				concat[k] = av[i][j];
 
-			k++;
+				k++;
+			}
 		}
 
 		concat[k] = '\n';
