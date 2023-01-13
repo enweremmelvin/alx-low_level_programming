@@ -12,7 +12,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
-	unsigned int i;
 
 	ptr = calloc(nmemb, size);
 
