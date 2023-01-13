@@ -13,7 +13,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
 
-	ptr = calloc(nmemb + 1, size);
+	ptr = calloc(nmemb, size);
+
+	if (nmemb == 0 || size == 0)
+		ptr = calloc(0, 0);
 
 	return (ptr);
 }
