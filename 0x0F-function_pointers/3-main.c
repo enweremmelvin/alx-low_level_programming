@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
 	}
 
 	if (
-		(atoi(argv[2]) == '/' && b == 0) ||
-		(atoi(argv[2]) == '%' && b == 0)
+		((char) atoi(argv[2]) == '/' && b == 0) ||
+		((char) atoi(argv[2]) == '%' && b == 0)
 		)
 	{
 		printf("Error\n");
