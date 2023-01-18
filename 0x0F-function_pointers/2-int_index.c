@@ -18,14 +18,17 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (size <= 0)
 		return (-1);
 
-	for (; i < size; i++)
+	if (array && cmp)
 	{
-		if (array[i])
+		for (; i < size; i++)
 		{
-			retval = cmp(array[i]);
+			if (array[i])
+			{
+				retval = cmp(array[i]);
 
-			if (retval != 0)
-				return (i);
+				if (retval != 0)
+					return (i);
+			}
 		}
 	}
 
