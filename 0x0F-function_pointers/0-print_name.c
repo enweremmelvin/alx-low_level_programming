@@ -4,7 +4,7 @@
  * @name: name to be passed as arg to callback
  * @f: pointer to callback that returns void
  *
- * Return: 0
+ * Return: nothing
  */
 
 void print_name(char *name, void (*f)(char *))
