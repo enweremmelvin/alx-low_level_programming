@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (spec[j]) /* loop for seperator */
 		{
-			if ((spec[j] == format[i]) && i != 0)
+			if ((spec[j] == format[i]) && i > 0)
 			{
 				printf(", ");
 				break;
@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			string = va_arg(arg, char *);
-			if (!string)
+			if ((!string) || (strcmp(string, "NULL") == 0))
 			{
 				printf("(nil)");
 				break;
