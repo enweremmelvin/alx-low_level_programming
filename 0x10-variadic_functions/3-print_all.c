@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -25,8 +24,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}
-			j++;
+			} j++;
 		}
 		switch (format[i]) /* switch statement to match identifiers*/
 		{
@@ -42,12 +40,13 @@ void print_all(const char * const format, ...)
 		case 's':
 			string = va_arg(arg, char *);
 			if ((!string) || (strcmp(string, "NULL") == 0))
+			{
 				printf("(nil)");
-			else
-				printf("%s", string);
+				break;
+			}
+			printf("%s", string);
 			break;
-		}
-		i++;
+		} i++;
 	}
 	printf("\n");
 	va_end(arg);
