@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	va_list arg;
 	char *string, *spec = "cifs";
-	unsigned int i = 0, j;
+	unsigned int i = 0, k = 0, j;
 
 	va_start(arg, format);
 	while (format && format[i])
@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (spec[j]) /* loop for seperator */
 		{
-			if ((spec[j] == format[i]) && i > 0)
+			if ((spec[j] == format[i]) && k)
 			{
 				printf(", ");
 				break;
@@ -29,16 +29,16 @@ void print_all(const char * const format, ...)
 		switch (format[i]) /* switch statement to match identifiers*/
 		{
 		case 'c':
-			printf("%c", va_arg(arg, int));
+			printf("%c", va_arg(arg, int)), k = 1;
 			break;
 		case 'i':
-			printf("%i", va_arg(arg, int));
+			printf("%i", va_arg(arg, int)), k = 1;
 			break;
 		case 'f':
-			printf("%f", va_arg(arg, double));
+			printf("%f", va_arg(arg, double)), k = 1;
 			break;
 		case 's':
-			string = va_arg(arg, char *);
+			string = va_arg(arg, char *), k = 1;
 			if ((!string) || (strcmp(string, "NULL") == 0))
 			{
 				printf("(nil)");
