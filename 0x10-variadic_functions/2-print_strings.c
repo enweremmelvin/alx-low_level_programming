@@ -16,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i, j;
 
 	if (n == 0)
-		return;
+		continue;
 
 	va_start(strarg, n);
 
