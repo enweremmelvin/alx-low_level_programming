@@ -26,11 +26,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", string);
 
-		if (strcmp(separator, "NULL") != 0)
+		if ((strcmp(separator, "NULL") != 0) && (i < n - 1))
 		{
-			if (i < n - 1)
-				for (j = 0; j < strlen(separator); j++)
-					printf("%c", separator[j]);
+			for (j = 0; j < strlen(separator); j++)
+				printf("%c", separator[j]);
 		}
 	}
 
