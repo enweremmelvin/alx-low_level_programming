@@ -29,7 +29,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if ((separator != NULL) && (i < n - 1))
 		{
 			for (j = 0; j < strlen(separator); j++)
-				printf("%c ", separator[j]);
+				printf("%c", separator[j]);
 		}
 	}
 
