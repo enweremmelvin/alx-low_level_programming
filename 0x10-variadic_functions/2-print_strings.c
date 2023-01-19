@@ -21,14 +21,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		string = va_arg(strarg, char *);
 
-		if (strcmp(string, "NULL") == 0)
+		if (!string)
 			printf("(nil)");
-		if (strcmp(string, "NULL") != 0)
+		else
 			printf("%s", string);
 
-		if ((separator != NULL) && (i < n - 1))
+		if (i < n - 1)
 		{
-			if (strcmp(separator, "NULL") != 0)
+			if (separator)
 			{
 				for (j = 0; j < strlen(separator); j++)
 					putchar(separator[j]);
