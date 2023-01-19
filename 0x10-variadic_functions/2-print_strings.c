@@ -26,7 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", string);
 
-		if ((separator != NULL) && (i < n - 1))
+		if ((strcmp(separator, "NULL") != 0) && (i < n - 1))
 		{
 			for (j = 0; j < strlen(separator); j++)
 				putchar(separator[j]);
@@ -34,5 +34,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 
 	printf("\n");
+
 	va_end(strarg);
 }
