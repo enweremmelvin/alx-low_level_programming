@@ -12,8 +12,8 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t len;
-	size_t elem_count;
+	int len;
+	int elem_count;
 	char *string;
 
 	elem_count = 0;
