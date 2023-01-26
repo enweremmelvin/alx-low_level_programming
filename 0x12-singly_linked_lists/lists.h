@@ -1,9 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-/* include standard libraries */
-#include <stdlib.h>
-
 /**
  * struct list - declaration of list structure
  *
