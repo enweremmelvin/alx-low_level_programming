@@ -1,6 +1,9 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+/* include essential standard libraries to avoid repetition*/
+#include <stddef.h>
+
 /**
  * struct list - declaration of list structure
  *
@@ -17,5 +20,6 @@ typedef struct list
 
 /* function prototypes */
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 #endif
