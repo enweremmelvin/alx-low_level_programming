@@ -19,10 +19,7 @@ size_t print_list(const list_t *h)
 	elem_count = 0;
 
 	if (h == NULL)
-	{
-		free(h);
 		return (-1);
-	}
 
 	while (h)
 	{
