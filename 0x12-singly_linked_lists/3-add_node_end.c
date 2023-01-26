@@ -35,5 +35,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		tmp_node->next = end_node;
 	}
 
-	return (tmp_node);
+	return (*head);
 }
