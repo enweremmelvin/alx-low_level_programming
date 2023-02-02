@@ -12,7 +12,7 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int num_bits;
-	int bits_cmp;
+	unsigned long int bits_cmp;
 
 	num_bits = 0;
 	bits_cmp = n ^ m;
