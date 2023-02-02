@@ -18,5 +18,8 @@ int main(void)
     printf("%u\n", n);
     n = flip_bits(1024, 1025);
     printf("%u\n", n);
+    n = flip_bits(INT_MAX, 520);
+    printf("%u\n", n);
+
     return (0);
 }

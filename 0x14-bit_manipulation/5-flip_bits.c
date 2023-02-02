@@ -14,11 +14,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int num_bits;
 	unsigned long int bits_cmp;
 
+	if (n > INT_MAX || m > INT_MAX)
+		return (-1);
+
 	num_bits = 0;
 	bits_cmp = n ^ m;
-
-	if (bits_cmp == n || bits_cmp == m)
-		return (num_bits);
 
 	while (bits_cmp)
 	{

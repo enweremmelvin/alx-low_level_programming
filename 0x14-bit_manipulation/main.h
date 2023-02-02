@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 #include <unistd.h>
 
 /* prototypes of functions */
