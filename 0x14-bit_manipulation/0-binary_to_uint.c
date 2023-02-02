@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	pow_val = 1;
 	converted = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
 	i = 0;
