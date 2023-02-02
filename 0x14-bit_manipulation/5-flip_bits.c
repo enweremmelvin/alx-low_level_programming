@@ -14,6 +14,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int num_bits;
 	int bits_cmp;
 
+	if (!(n > 0) || !(m > 0))
+		return (-1);
+
 	num_bits = 0;
 	bits_cmp = n ^ m;
 
