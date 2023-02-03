@@ -1,7 +1,9 @@
 /**
  * get_endianness - check the endian-ness of the system
+ *
  *                  check if the system is Big Endian
  *                  i.e. stores MSB (most significant byte) first
+ *
  *                  or if the system is Little Endian
  *                  i.e. stores LSB (least significant byte) first
  *
