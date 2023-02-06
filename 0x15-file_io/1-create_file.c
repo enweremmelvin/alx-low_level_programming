@@ -19,7 +19,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	length = strlen(text_content);
-	open_ret_val = open(filename, O_CREAT | O_RDWR, 0600);
+	open_ret_val = open(filename, O_RDWR | O_CREAT, 0600);
+
+	if (open_ret_val == -1)
+		return (-1);
 
 	/**
 	 * check if text_content is NULL and
