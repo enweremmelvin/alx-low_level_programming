@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define READ_MAX 1024
+
 /* include needed libraries */
 #include <fcntl.h>
 #include <stdio.h>
