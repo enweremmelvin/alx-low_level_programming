@@ -26,17 +26,29 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	open_ret_val = open(filename, O_RDONLY);
 	if (open_ret_val == -1)
+	{
+		free(read_str);
 		return (0);
+	}
 
 	read_ret_val = read(open_ret_val, read_str, letters);
 	if (read_ret_val == -1)
+	{
+		free(read_str);
 		return (0);
+	}
 
 	write_ret_val = write(1, read_str, read_ret_val);
 	if (write_ret_val == -1)
+	{
+		free(read_str);
 		return (0);
+	}
 	if (write_ret_val != read_ret_val)
+	{
+		free(read_str);
 		return (0);
+	}
 
 	free(read_str);
 	close(open_ret_val);
