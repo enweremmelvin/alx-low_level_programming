@@ -17,23 +17,23 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-
-	length = strlen(text_content);
-	open_ret_val = open(filename, O_RDWR | O_CREAT, 0600);
-
-	if (open_ret_val == -1)
-		return (-1);
-
-	/**
-	 * check if text_content is NULL and
-	 * end the program after creating empty file
-	 */
-
 	if (text_content == NULL)
 	{
+		printf("Entered this condition\n");
+		open_ret_val = open(filename, O_CREAT, 0600);
+
+		if (open_ret_val == -1)
+			return (-1);
+
 		close(open_ret_val);
 		return (1);
 	}
+
+	length = strlen(text_content);
+	open_ret_val = open(filename, O_TRUNC | O_RDWR | O_CREAT, 0600);
+
+	if (open_ret_val == -1)
+		return (-1);
 
 	write_ret_val = write(open_ret_val, text_content, length);
 
