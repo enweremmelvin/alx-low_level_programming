@@ -12,13 +12,13 @@ int get_char_count(int ac, char *av)
 {
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fptr = fopen(av, "r");
 	if (fptr == NULL)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av);
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", av);
 		exit(98);
 	}
 	for (c = getc(fptr); c != EOF; c = getc(fptr))
@@ -39,6 +39,7 @@ int get_char_count(int ac, char *av)
 
 int main(int argc, char *argv[])
 {
+	int OUT = STDOUT_FILENO;
 	count = get_char_count(argc, argv[1]);
 
 	read_str = malloc(count);
@@ -47,7 +48,7 @@ int main(int argc, char *argv[])
 	if ((open_val == -1) || (read_val == -1))
 	{
 		free(read_str);
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(OUT, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	to_open = open(argv[2], O_TRUNC | O_RDWR | O_CREAT, 0664);
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
 	if ((to_open == -1) || (write_val == -1))
 	{
 		free(read_str);
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(OUT, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	close_to = close(to_open);
@@ -63,13 +64,13 @@ int main(int argc, char *argv[])
 	if (close_to == -1)
 	{
 		free(read_str);
-		dprintf(2, "Error: Can't close fd %d\n", to_open);
+		dprintf(OUT, "Error: Can't close fd %d\n", to_open);
 		exit(100);
 	}
 	if (close_from == -1)
 	{
 		free(read_str);
-		dprintf(2, "Error: Can't close fd %d\n", open_val);
+		dprintf(OUT, "Error: Can't close fd %d\n", open_val);
 		exit(100);
 	} return (0);
 }
