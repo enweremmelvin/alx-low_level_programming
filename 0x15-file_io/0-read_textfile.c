@@ -15,9 +15,9 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *read_str;
-	int open_ret_val;
-	int read_ret_val;
-	int write_ret_val;
+	ssize_t open_ret_val;
+	ssize_t read_ret_val;
+	ssize_t write_ret_val;
 
 	if (filename == NULL)
 		return (0);
@@ -51,7 +51,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(read_str);
 	close(open_ret_val);
-        close(read_ret_val);
 
 	return (write_ret_val);
 }
