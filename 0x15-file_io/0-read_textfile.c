@@ -21,15 +21,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
+
 	open_ret_val = open(filename, O_RDONLY);
 	if (open_ret_val == -1)
 		return (0);
+
 	read_str = malloc(letters);
-	if (read_str == NULL)
-	{
-		close(open_ret_val);
-		return (0);
-	}
 	read_ret_val = read(open_ret_val, read_str, letters);
 	if (read_ret_val == -1)
 	{
@@ -37,6 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(open_ret_val);
 		return (0);
 	}
+
 	write_ret_val = write(2, read_str, read_ret_val);
 	if (write_ret_val == -1)
 	{
@@ -50,6 +48,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(open_ret_val);
 		return (0);
 	}
+
 	free(read_str);
 	close(open_ret_val);
 
