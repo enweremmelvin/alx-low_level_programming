@@ -12,9 +12,10 @@ int get_char_count(int ac, char *av)
 {
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
-	} fptr = fopen(av, "r");
+	}
+	fptr = fopen(av, "r");
 	if (fptr == NULL)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av);
@@ -49,7 +50,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	to_open = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
+	to_open = open(argv[2], O_TRUNC | O_RDWR | O_CREAT, 0664);
 	write_val = write(to_open, read_str, read_val);
 	if ((to_open == -1) || (write_val == -1))
 	{
@@ -62,14 +63,12 @@ int main(int argc, char *argv[])
 	if (close_to == -1)
 	{
 		free(read_str);
-		close(to_open);
 		dprintf(2, "Error: Can't close fd %d\n", to_open);
 		exit(100);
 	}
 	if (close_from == -1)
 	{
 		free(read_str);
-		close(open_val);
 		dprintf(2, "Error: Can't close fd %d\n", open_val);
 		exit(100);
 	} return (0);
