@@ -48,24 +48,28 @@ int main(int argc, char *argv[])
 		free(read_str);
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	} to_open = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
+	}
+	to_open = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
 	write_val = write(to_open, read_str, read_val);
 	if ((to_open == -1) || (write_val == -1))
 	{
 		free(read_str);
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
-	} close_to = close(to_open);
+	}
+	close_to = close(to_open);
 	close_from = close(open_val);
 	if (close_to == -1)
 	{
 		free(read_str);
+		close(to_open);
 		dprintf(2, "Error: Can't close fd %d\n", to_open);
 		exit(100);
 	}
 	if (close_from == -1)
 	{
 		free(read_str);
+		close(open_val);
 		dprintf(2, "Error: Can't close fd %d\n", open_val);
 		exit(100);
 	} return (0);
