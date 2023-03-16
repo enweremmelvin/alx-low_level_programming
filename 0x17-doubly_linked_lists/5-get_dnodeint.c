@@ -24,14 +24,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		return (NULL);
 
 	temp = head;
-	node_count = -1;
+	node_count = 0;
 
 	while (temp != NULL)
 	{
-		node_count += 1;
-
 		if (node_count == index)
 			break;
+		node_count += 1;
 		temp = temp->next;
 	}
 
