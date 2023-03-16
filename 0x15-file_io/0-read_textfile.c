@@ -15,12 +15,14 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *read_str;
-	int open_ret_val;
-	int read_ret_val;
-	int write_ret_val;
+	ssize_t open_ret_val;
+	ssize_t read_ret_val;
+	ssize_t write_ret_val;
 
 	if (filename == NULL)
 		return (0);
+        if (letters == 0)
+                return (0);
 
 	open_ret_val = open(filename, O_RDONLY);
 	if (open_ret_val == -1)
