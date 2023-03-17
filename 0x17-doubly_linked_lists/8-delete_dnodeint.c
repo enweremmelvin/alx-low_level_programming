@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * delete_dnodeint_at_index - delete node of doubly linked list at index (index)
+ * delete_dnodeint_at_index - delete node of doubly linked
+ *                            list at index (index)
  *
  * @head: head of doubly linked list
  * @index: index of node to be deleted
