@@ -4,6 +4,7 @@
 
 /**
  * insert_dnodeint_at_index - insert a new node at a given position
+ * NOTE: Forgive the compactness, it's all in a bid to comply with betty style
  *
  * @h: head of linked list
  * @idx: index to insert new node at
@@ -24,7 +25,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	list_len = dlistint_len(*h);
 	if (new_node == NULL)
 		return (NULL);
-	if (*h == NULL && idx == 0)
+	if (!(*h) && idx == 0)
 	{
 		new_node->next = NULL;
 		new_node->prev = NULL;
