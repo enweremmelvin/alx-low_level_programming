@@ -1,6 +1,5 @@
 #include "hash_tables.h"
 #include <string.h>
-#include <stdio.h>
 
 /**
  * hash_table_set - add an element to the hash table (ht)
@@ -32,9 +31,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		ht->array[index]->key = malloc(sizeof(char) * strlen(key));
 		ht->array[index]->value = malloc(sizeof(char) * strlen(value));
+		ht->array[index]->next = NULL;
 		strcpy(ht->array[index]->key, key);
 		strcpy(ht->array[index]->value, value);
-		ht->array[index]->next = NULL;
 	}
 	else
 	{
@@ -44,9 +43,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		val->key = malloc(sizeof(char) * strlen(key));
 		val->value = malloc(sizeof(char) * strlen(value));
+		val->next = ht->array[index];
 		strcpy(val->key, key);
 		strcpy(val->value, value);
-		val->next = ht->array[index];
 		ht->array[index] = val;
 	}
 
