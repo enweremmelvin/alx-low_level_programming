@@ -20,8 +20,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *val __attribute__((unused));
 	hash_node_t *temp __attribute__((unused));
 
-	size = get_table_size(ht)
-	index = key_index((unsigned char *) key, 1024);
+	size = get_table_size(ht);
+	index = key_index((unsigned char *) key, size);
 
 	if (ht == NULL)
 		return (0);
@@ -63,7 +63,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * Return: size of the hash table
  */
 
-unsigned long int get_table_size(hash_table_t ht)
+unsigned long int get_table_size(hash_table_t *ht)
 {
+	(void) ht;
 	return (1024);
 }
