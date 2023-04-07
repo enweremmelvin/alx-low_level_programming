@@ -24,12 +24,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = malloc(sizeof(hash_node_t));
-
 		if (ht->array[index] == NULL)
 			return (0);
 
 		ht->array[index]->key = malloc(sizeof(char) * strlen(key));
 		ht->array[index]->value = malloc(sizeof(char) * strlen(value));
+		if (ht->array[index]->key == NULL)
+			return (0);
+		if (ht->array[index]->value == NULL)
+		{
+			free(ht->array[index]->key);
+			return (0);
+		}
 		strcpy(ht->array[index]->key, key);
 		strcpy(ht->array[index]->value, value);
 		ht->array[index]->next = NULL;
