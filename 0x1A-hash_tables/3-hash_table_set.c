@@ -23,7 +23,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	size = get_table_size(ht);
 	index = key_index((unsigned char *) key, size);
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL)
+		return (0);
+	if (strlen(key) == 0)
 		return (0);
 
 	if (ht->array[index] == NULL)
