@@ -31,8 +31,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		ht->array[index]->key = malloc(sizeof(char) * strlen(key));
 		ht->array[index]->value = malloc(sizeof(char) * strlen(value));
-		if (!(ht->array[index]->key) || !(ht->array[index]->value))
-			return (0);
 		ht->array[index]->next = NULL;
 		strcpy(ht->array[index]->key, key);
 		strcpy(ht->array[index]->value, value);
@@ -45,8 +43,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		val->key = malloc(sizeof(char) * strlen(key));
 		val->value = malloc(sizeof(char) * strlen(value));
-		if (!(val->key) || !(val->value))
-			return (0);
 		val->next = ht->array[index];
 		strcpy(val->key, key);
 		strcpy(val->value, value);
