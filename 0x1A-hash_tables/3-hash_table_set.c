@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *val __attribute__((unused));
 	hash_node_t *temp __attribute__((unused));
 
-	index = key_index((const unsigned char *) key, 1024);
+	index = key_index((unsigned char *) key, 1024);
 
 	if (ht->array[index] == NULL)
 	{
