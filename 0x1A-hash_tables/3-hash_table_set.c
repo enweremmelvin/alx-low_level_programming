@@ -14,18 +14,17 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int size, index;
+	unsigned long int index;
 
 	hash_node_t *val __attribute__((unused));
 	hash_node_t *temp __attribute__((unused));
-
-	size = get_table_size(ht);
-	index = key_index((unsigned char *) key, size);
 
 	if (ht == NULL || key == NULL)
 		return (0);
 	if (strlen(key) == 0)
 		return (0);
+
+	index = key_index((unsigned char *) key, ht->size);
 
 	if (ht->array[index] == NULL)
 	{
@@ -54,18 +53,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	return (1);
-}
-
-/**
- * get_table_size - dynamically get the size of the hash table
- *
- * @ht: hash table
- *
- * Return: size of the hash table
- */
-
-unsigned long int get_table_size(hash_table_t *ht)
-{
-	(void) ht;
-	return (1024);
 }
