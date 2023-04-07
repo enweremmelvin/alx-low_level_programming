@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *val __attribute__((unused));
 	hash_node_t *temp __attribute__((unused));
 
-	if (ht == NULL || key == NULL)
+	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 	if (strlen(key) == 0)
 		return (0);
