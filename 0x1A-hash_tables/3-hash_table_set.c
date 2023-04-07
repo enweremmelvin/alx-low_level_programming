@@ -18,6 +18,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *val __attribute__((unused));
 	hash_node_t *temp __attribute__((unused));
 
+	if (ht == NULL)
+		return (0);
+
 	index = key_index((unsigned char *) key, ht->size);
 
 	if (ht->array[index] == NULL)
