@@ -1,0 +1,10 @@
+# this makefile compiles specified .c files in the current directory
+#+ VARIABLES:
+#++ CC -> compiler to be used
+#++ SRC -> required files
+
+CC = gcc
+SRC = main.c school.c
+
+all : $(SRC)
+	$(CC) $(SRC) -o school
