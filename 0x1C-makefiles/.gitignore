@@ -4,3 +4,4 @@ main.c
 main.h
 school.c
 *~
+*.o
