@@ -1,0 +1,22 @@
+# make file for task -: 3. make -f 3-Makefile
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm
+
+all : $(OBJ) $(SRC)
+	$(CC) -o $(NAME) $(OBJ)
+
+clean :
+	$(RM) -f *~ $(NAME)
+
+oclean :
+	$(RM) -f $(OBJ)
+
+fclean :
+	$(RM) -f *~ $(NAME)
+	$(RM) -f $(OBJ)
+
+re :	oclean all
