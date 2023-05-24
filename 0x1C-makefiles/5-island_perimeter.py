@@ -12,23 +12,22 @@ def island_perimeter(grid):
         the island described in grid
     """
 
-    prm = 0
-    row_len = len(grid[0])
-    grid_prm = len(grid) * len(grid[0])
+    new_grid = []
 
     for i in range(len(grid)):
-        cell = 4
+        sub_list = []
 
-        for j in range(row_len):
+        for j in range(len(grid[i])):
             if grid[i][j] == 1:
-                cell -= 1
+                sub_list.append(grid[i][j])
 
-        for j in range(row_len):
-            if grid[i][j] == 1:
-                cell += 1
-                break
+        if len(sub_list) > 0:
+            new_grid.append(sub_list)
 
-        prm += cell
+    prm = 0
+    grid_len = len(new_grid)
 
-    return grid_prm - prm
-            
+    for i in range(grid_len):
+        prm += 4
+
+    return prm
