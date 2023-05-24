@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 
 """
+    this module contains a function that computes the \
+    perimeter of an island
 """
 
 
 def island_perimeter(grid):
     """
+        this function returns the perimeter of \
+        the island described in grid
     """
 
     prm = 0
