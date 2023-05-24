@@ -1,4 +1,4 @@
-#
+# this makefile compiles a select .c files
 
 CC = gcc
 SRC = main.c school.c
