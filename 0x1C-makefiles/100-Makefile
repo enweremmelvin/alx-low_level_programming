@@ -5,20 +5,20 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-.PHONY all
+.PHONY: all
 all : $(OBJ) $(SRC) m.h
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
-.PHONY clean
+.PHONY: clean
 clean :
 	$(RM) -f *~ $(NAME)
 
-.PHONY oclean
+.PHONY: oclean
 oclean :
 	$(RM) -f $(OBJ)
 
-.PHONY fclean
-fclean : clean oclean
+.PHONY: fclean
+fclean :	clean oclean
 
-.PHONY re
+.PHONY: re
 re :	oclean all
