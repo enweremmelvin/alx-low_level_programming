@@ -24,7 +24,6 @@ def island_perimeter(grid):
         if len(sub_list) > 0:
             new_grid.append(sub_list)
 
-    print(new_grid)
     grid_len = len(new_grid)
     prm = 4 * grid_len
 
